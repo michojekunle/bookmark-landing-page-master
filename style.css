@@ -1,0 +1,170 @@
+:root {
+    --GrayishBlue: hsl(229, 8%, 60%);
+    --VeryDarkBlue: hsl(229, 31%, 21%);
+    --SoftBlue: hsl(231, 69%, 60%);
+    --SoftRed: hsl(0, 94%, 66%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;justify-content: space-between;
+    padding: 2rem  8rem;
+    position: relative;
+}
+
+.main-header .open-close-nav{
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 2.3rem;
+}
+
+.main-header .brand-logo img {
+    width: 14rem;
+}
+
+.nav-links  {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.nav-links .nav-header-m {
+    display: none;
+}
+
+.nav-links .nav-link {
+    list-style-type: none;
+    
+}
+
+.nav-links .nav-link a {
+    text-decoration: none;
+    color: var(--VeryDarkBlue);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all .2s;
+}
+
+.nav-links .nav-link a:hover {
+    color: var(--SoftRed)
+}
+
+.nav-links .social-icons {
+    display: none;
+}
+
+.nav-link:last-of-type a{
+    background-color: var(--SoftRed);
+    padding: .8rem 2.6rem;
+    border-radius: .4rem;
+    color: var(--White);
+    border: 2px solid var(--SoftRed);
+    transition: all .4s
+}
+
+.nav-link:last-of-type a:hover {
+    background: none;
+    color: var(--VeryDarkBlue);
+}
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 2rem 3.5rem;
+    }
+    
+    .main-header .open-close-nav {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        justify-content: start;
+        gap: 0;
+        top:0;
+        left: 0;
+        width: 100%;
+        background: hsla(229, 31%, 21%, .9);
+        color: white;
+        height: 70rem;
+        min-height: 100vh;
+        padding: 2rem 3.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links .nav-header-m {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid hsla(229, 8%, 60%, .4);
+    }
+
+
+    .nav-links  .nav-link  {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid hsla(229, 8%, 60%, .4);
+        margin-top: 2rem;
+        letter-spacing: .3rem;
+    }
+
+    .nav-links .nav-link a {
+        color: var(--White);
+        width: 100%;
+    }
+
+    .nav-links .nav-link:last-of-type a {
+        background: none;
+        border: none;
+    }
+
+    .nav-links .nav-link:last-of-type {
+        border-bottom: none;
+        margin-top: 3rem;
+        border: 2px solid var(--White);
+        border-radius: .5rem;
+        padding: 1.2rem 
+    }
+
+    .nav-links .social-icons {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        position: absolute;
+        bottom: 5rem;
+    } 
+}
+
+@media screen and (max-width: 375px) {
+    .main-header .open-close-nav {
+        display: block;
+        width: 1.5rem;
+    }
+
+    .main-header .brand-logo img {
+        width: 12rem
+    }    
+}
