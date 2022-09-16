@@ -177,7 +177,7 @@ html {
     }   
 
     .nav-links .nav-header-m svg {
-        transform: scale(.6) translateX(-30%);
+        transform: scale(.8) translateX(-10%);
     }
 
 }
