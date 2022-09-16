@@ -26,7 +26,7 @@ html {
 .main-header {
     display: flex;
     align-items: center;justify-content: space-between;
-    padding: 2rem  8rem;
+    padding: 4rem  12rem;
     position: relative;
 }
 
@@ -188,7 +188,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 8rem;
+    padding: 2rem 12rem;
     margin: 7rem 0;
     position: relative;
 }
@@ -247,9 +247,9 @@ html {
 .main-section .illustration .illustration-bg-right {
     position: absolute;
     width: 90%;
-    transform: translateX(25%);
-    min-width: 300px;
-    height:70%;
+    transform: translateX(45%);
+    min-width: 45rem;
+    height:80%;
     border-radius: 0 0 0 35%;
     background-color: var(--SoftBlue);
     bottom: 0;
@@ -298,7 +298,7 @@ html {
     }
 
     .main-section .content p { 
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -310,7 +310,243 @@ html {
 
     .main-section .illustration .illustration-bg-right {
         position: absolute;
-        min-width: 250px;
+        min-width: 350px;
+    }
+}
+
+
+
+.features-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 12rem;
+}
+
+.features-section .features-header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-section .features-header h1{
+    font-size: 2.4rem;
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.features-section .features-header p{
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    line-height: 2.3rem;
+    width: 90%;
+    max-width: 40rem;
+    color: var(--GrayishBlue);
+    font-weight:400;
+}
+
+.features-section .features-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid hsla(229, 8%, 60%, .3);
+}
+
+.features-section .features-nav li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    color: var(--GrayishBlue);
+    padding: 0 2.5rem;
+    padding-bottom: 2rem;       
+    cursor: pointer;
+}
+
+.features-section .features-nav li.active {
+    color: #000;
+    border-bottom: 3px solid var(--SoftRed);
+}
+
+.features-section .features-body {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7rem 0;
+    gap: 7rem;
+    position: relative;
+}
+
+.features-section .features-body .illustration {
+    position: relative;
+    flex: 1.1;
+    margin-bottom: 5rem;
+}
+
+.features-section .features-body .illustration .illustration-bg-left {
+    position: absolute;
+    width: 90%;
+    transform: translate(-45%, 30%);
+    min-width: 45rem;
+    height:90%;
+    border-radius: 0 0 35% 0;
+    background-color: var(--SoftBlue);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.features-section .features-body .illustration img {
+    width: 100%;
+}
+
+.features-section .features-body .content {
+    flex: 1;
+}
+
+.features-section .features-body .content h1 {
+    font-size: 2.4rem;
+    width: 80%;
+    font-weight: 500;
+}
+
+.features-section .features-body .content p {
+    font-size: 1.6rem;
+    margin: 2.5rem 0;
+    color: var(--GrayishBlue);
+    width:85%;
+    line-height: 2.7rem;
+}
+
+.features-section .features-body .content button {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.features-section .features-body .content button {
+    border: 1.5px solid var(--SoftBlue);
+    background-color: var(--SoftBlue);
+    color: var(--White);
+    margin-right: 2rem;
+    box-shadow: 2px 2px 4px 0 var(--GrayishBlue);
+}
+
+.features-section .features-body .content button:hover {
+    background-color:var(--White) ;
+    color: var(--SoftBlue);
+}
+
+@media screen and (max-width: 858px) {
+    .features-section .features-body .content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .features-section .features-body .content p {
+        font-size: 1.4rem;
+        margin: 2.3rem 0;
+        line-height: 2.4rem;
+    }
+    
+    .features-section .features-body .content button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features-section .features-header {
+        width: 100%;
     }
 
+    .features-section {
+        padding: 2rem 3.5rem;
+    }
+
+    .features-section .features-header h1 {
+        font-size: 2.4rem;
+        width: 100%;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .features-section .features-header p {
+        font-size: 1.4rem;
+        margin: 2rem 0;
+        line-height: 2.3rem;
+        width: 90%;
+        max-width: 400rem;
+        color: var(--GrayishBlue);
+        font-weight:400;
+        
+    }
+    .features-section .features-body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        margin: 0;
+    }    
+
+    .features-section .features-body .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .features-section .features-body .content h1 {
+        width: 90%;
+        font-size: 3rem;
+    }
+
+    .features-section .features-body .content p { 
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .features-section .features-nav {
+        flex-direction: column;
+        border-bottom: 0 solid;
+        gap: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features-section .features-nav li:first-of-type {
+        border-top: 1px solid hsla(229, 8%, 60%, .3);
+        padding-top: 1.5rem;
+    }
+
+    .features-section .features-nav li {
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid hsla(229, 8%, 60%, .6);
+    }
+    
+    
+}
+
+@media screen and (max-width: 375px) {
+    .features-section .features-body .content h1 {
+        width: 90%;
+        font-size: 2.4rem;
+    } 
+
+    .features-section .features-body .illustration .illustration-bg-left {
+        position: absolute;
+        min-width: 350px;
+    }
 }
