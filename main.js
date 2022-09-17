@@ -1,9 +1,9 @@
 const openNav = document.getElementById('open-nav');
 const closeNav = document.getElementById('close-nav');
 const featuresNavList = document.querySelectorAll('.features-nav li');
-const featureIllustration = document.getElementById('feature-illustration')
-const featureTitle = document.getElementById('feature-title')
-const featureAbout = document.getElementById('feature-about')
+const featureIllustration = document.getElementById('feature-illustration');
+const featureTitle = document.getElementById('feature-title');
+const featureAbout = document.getElementById('feature-about');
 
 openNav.addEventListener('click', () => {
     document.querySelector('.nav-links').classList.add('active');
@@ -42,4 +42,31 @@ featuresNavList.forEach((feature, index) => {
     })
 })
 
+const accordionList = document.querySelectorAll('.accordion-item');
+console.log(accordionList);
+
+accordionList.forEach((accordionItem, idx) => {
+    accordionItem.children[0].addEventListener('click', () => {
+        accordionItem.classList.toggle('active');
+        accordionList.forEach((accordionItem, index) => {
+            if(index !== idx) {accordionItem.classList.remove('active')}
+        });
+    })
+});
+
+const isEmailValid = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+document.querySelector('#contact-us').addEventListener('submit', (e) => {
+        if(isEmailValid(document.getElementById('email').value.trim())){
+            
+        } else {
+            e.preventDefault();
+            document.querySelector('.input-field').style.backgroundColor = 'red';
+            document.querySelector('.form-error').style.display = 'block';
+            document.querySelector('.icon-error').style.opacity = 1;    
+        }    
+})
 
