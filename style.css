@@ -389,6 +389,10 @@ html {
     margin-bottom: 5rem;
 }
 
+.features-section .features-body .illustration img {
+    height: 30rem;
+}
+
 .features-section .features-body .illustration .illustration-bg-left {
     position: absolute;
     width: 90%;
@@ -535,7 +539,10 @@ html {
         padding-bottom: 1.5rem;
         border-bottom: 1px solid hsla(229, 8%, 60%, .6);
     }
-    
+
+    .features-section .features-body .illustration img {
+        height: 26rem;
+    }
     
 }
 
@@ -547,6 +554,11 @@ html {
 
     .features-section .features-body .illustration .illustration-bg-left {
         position: absolute;
-        min-width: 350px;
+        min-width: 200px;
     }
 }
+
+.download-extension {
+    
+}
+
