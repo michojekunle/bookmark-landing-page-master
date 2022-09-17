@@ -19,7 +19,7 @@ html {
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -407,8 +407,9 @@ html {
 }
 
 
-.features-section .features-body .illustration img {
+.features-section .features-body .illustration img#feature-illustration {
     width: 100%;
+    min-width: 32rem;
 }
 
 .features-section .features-body .content {
@@ -559,6 +560,109 @@ html {
 }
 
 .download-extension {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
 }
 
+.download-extension .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-extension .header h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.download-extension .header p {
+    font-size: 1.4rem;
+    color: var(--GrayishBlue);
+    line-height: 2.3rem;
+    width: 70%;
+}
+
+.download-extension .downloads {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+.downloads .download-card { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 30rem;
+    box-shadow: 2px 2px 6px hsla(229, 8%, 60%, .3);
+    padding : 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    background-image: url('./images/bg-dots.svg');
+    background-repeat: no-repeat;
+    background-position:  78% 78%;
+}
+
+.downloads .download-card img {
+    width: 40%;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.downloads .download-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.downloads .download-card p {
+    color: var(--GrayishBlue);
+    font-size: 1.4rem;
+    margin-bottom: 5.6rem;
+}
+
+.downloads .download-card button {
+    width: 100%;
+    text-align: center;
+    background-color: var(--SoftBlue);
+    color: var(--White);
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    border:2px solid var(--SoftBlue);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.downloads .download-card button:hover {
+    background: none;
+    color: var(--SoftBlue);
+}
+
+.downloads .download-card:nth-child(2) {
+    margin-top: 8rem;
+}
+
+.downloads .download-card:nth-child(3) {
+    margin-top: 16rem;
+}
+
+@media screen and (max-width: 998px) {
+    .downloads .download-card:nth-child(2), .downloads .download-card:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .downloads {
+        margin-top: 4rem;
+    }
+}
